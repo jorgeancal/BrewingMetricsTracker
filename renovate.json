@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "packageRules": [
+    {
+      "managers": ["gomod"],
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "groupName": "go modules"
+    }
+  ],
+  "gomod": {
+    "enabled": true
+  },
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "schedule": ["after 6am and before 8am on every weekday"],
+  "timezone": "UTC"
+}
